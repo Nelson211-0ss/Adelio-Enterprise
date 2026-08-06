@@ -86,10 +86,10 @@ function initNavToggle() {
 
 // ---------- Highlight active nav link ----------
 function initActiveNav() {
-  const current = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href === current) link.classList.add('active');
+  const segments = window.location.pathname.replace(/index\.html$/, '').split('/').filter(Boolean);
+  const current = segments.length ? segments[segments.length - 1] : 'home';
+  document.querySelectorAll('.nav-links a[data-page]').forEach((link) => {
+    if (link.dataset.page === current) link.classList.add('active');
   });
 }
 

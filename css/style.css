@@ -234,7 +234,9 @@ section { padding: 96px 0; }
 }
 
 .nav-toggle span {
+  width: 100%;
   height: 2px;
+  flex-shrink: 0;
   background: var(--white);
   border-radius: 2px;
   transition: var(--transition);
@@ -501,6 +503,12 @@ section { padding: 96px 0; }
 
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.split-gap { margin-bottom: 96px; }
+
+@media (max-width: 900px) {
+  .split-gap { margin-bottom: 48px; }
 }
 
 .panel {
@@ -871,6 +879,8 @@ section { padding: 96px 0; }
 }
 
 .section-white .faq-item { border-bottom-color: rgba(0,0,0,0.1); }
+.section-white .faq-question { color: #131313; }
+.section-white .faq-answer { color: #4a4a4a; }
 
 .section-white .category-tabs button {
   border-color: rgba(0,0,0,0.15);
