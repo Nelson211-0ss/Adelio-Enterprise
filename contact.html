@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Adelio & Sons Enterprise</title>
+  <meta name="description" content="Get in touch with Adelio & Sons Enterprise for IT solutions and general supplies — request a quote, ask a question, or visit our office.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">A&S</div>
+        <div class="logo-text">
+          <span class="name">Adelio & Sons</span>
+          <span class="sub">Enterprise</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Page header image slider ===== -->
+  <section class="hero-slider size-md" data-interval="5500">
+
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1920&auto=format&fit=crop')">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="container">
+          <div class="slide-inner">
+            <div class="breadcrumb">Home / <span class="text-orange">Contact</span></div>
+            <h1>Get In Touch</h1>
+            <p class="lead">Have a project, order, or question? We'd love to hear from you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1920&auto=format&fit=crop')">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="container">
+          <div class="slide-inner">
+            <div class="breadcrumb">Home / <span class="text-orange">Contact</span></div>
+            <h1>Get In Touch</h1>
+            <p class="lead">Have a project, order, or question? We'd love to hear from you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="slider-arrow prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="slider-arrow next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="slider-controls"><div class="slider-dots"></div></div>
+  </section>
+
+  <!-- ===== Contact main ===== -->
+  <section>
+    <div class="container">
+      <div class="split">
+
+        <div class="reveal">
+          <div class="eyebrow">Contact Information</div>
+          <h2>We're Here to Help</h2>
+          <div class="divider-orange"></div>
+          <p style="color:var(--gray-100); margin-bottom:32px;">Reach out through any of the channels below, or send us a message directly and we'll respond within one business day.</p>
+
+          <div class="contact-info-card">
+            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Our Office</h4>
+              <p>[Your Street Address, City, Country]</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>[Your Phone Number]</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>[Your Email Address]</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Mon – Fri: 8:00 AM – 5:00 PM<br>Sat: 9:00 AM – 1:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <h3 style="margin-bottom:6px;">Send Us a Message</h3>
+          <p style="color:var(--gray-300); font-size:0.9rem; margin-bottom:28px;">Fields marked * are required.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+              </div>
+              <div class="form-group">
+                <label for="subject">I'm interested in *</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="it-services">IT Solutions</option>
+                  <option value="supplies">General Supplies</option>
+                  <option value="bulk-order">Bulk / Corporate Order</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+
+            <div class="form-status"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Map ===== -->
+  <section class="section-white">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center">Find Us</div>
+        <h2>Visit Our Office</h2>
+        <p>[Replace the embed below with your actual Google Maps location.]</p>
+      </div>
+      <div class="map-embed reveal">
+        <iframe
+          src="https://www.google.com/maps?q=business+district&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Office location map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">A&S</div>
+            <div class="logo-text">
+              <span class="name">Adelio & Sons</span>
+              <span class="sub">Enterprise</span>
+            </div>
+          </a>
+          <p>Your trusted partner for IT solutions and general supplies — helping businesses stay connected, secure, and fully stocked.</p>
+          <div class="social-row">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Network Setup</a></li>
+            <li><a href="services.html">Hardware &amp; Repair</a></li>
+            <li><a href="services.html">Cybersecurity</a></li>
+            <li><a href="services.html">Cloud &amp; Backup</a></li>
+            <li><a href="services.html">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> [Your Street Address, City, Country]</li>
+            <li><i class="fa-solid fa-phone"></i> [Your Phone Number]</li>
+            <li><i class="fa-solid fa-envelope"></i> [Your Email Address]</li>
+            <li><i class="fa-solid fa-clock"></i> Mon – Fri: 8:00 AM – 5:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Adelio & Sons Enterprise. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
