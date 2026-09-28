@@ -61,6 +61,18 @@ function initHeroSliders() {
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', start);
 
+    // Swipe between slides on touch screens
+    let touchX = null;
+    slider.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) < 50) return;
+      dx < 0 ? next() : prev();
+      restart();
+    });
+
     start();
   });
 }
@@ -71,16 +83,28 @@ function initNavToggle() {
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
 
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('open');
-    links.classList.toggle('open');
-  });
+  toggle.setAttribute('aria-expanded', 'false');
+
+  function setOpen(open) {
+    toggle.classList.toggle('open', open);
+    links.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  }
+
+  toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
 
   links.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('open');
-      links.classList.remove('open');
-    });
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  // Close the mobile menu if the viewport grows back to desktop width
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+    if (e.matches) setOpen(false);
   });
 }
 

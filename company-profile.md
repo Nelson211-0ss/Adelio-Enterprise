@@ -236,7 +236,7 @@ Adelio & Sons Enterprise has supplied and supported the following organizations,
 Magwi Town, Opp TrustLink Prosper, South Sudan
 
 📞 +211 922 266 637 / +211 922 287 772
-✉️ adelio.sonservices@gmail.com
+✉️ adelio.sonservices02@gmail.com  |  ✉️ akenathomas44@gmail.com
 
 **Business Hours**
 Mon – Fri: 8:00 AM – 5:00 PM
