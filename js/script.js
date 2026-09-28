@@ -3,6 +3,7 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initNavToggle();
   initActiveNav();
   initScrollReveal();
@@ -13,6 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderShrink();
   initHeroSliders();
 });
+
+// ---------- Preloader ----------
+function initPreloader() {
+  const preloader = document.querySelector('.preloader');
+  if (!preloader) return;
+
+  let done = false;
+  const hide = () => {
+    if (done) return;
+    done = true;
+    preloader.classList.add('hidden');
+    preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
+  };
+
+  if (document.readyState === 'complete') hide();
+  else window.addEventListener('load', hide);
+  // Never block the page for long on a slow image or font
+  setTimeout(hide, 4000);
+}
 
 // ---------- Hero image sliders ----------
 function initHeroSliders() {
